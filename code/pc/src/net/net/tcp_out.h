@@ -1,11 +1,7 @@
 ﻿/**
  * @file tcp_out.h
- * @author lishutong(527676163@qq.com)
  * @brief tcp输出模块
- * @version 0.1
- * @date 2022-11-17
  * 
- * @copyright Copyright (c) 2022
  * 
  */
 #ifndef TCP_OUT_H

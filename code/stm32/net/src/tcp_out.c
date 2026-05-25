@@ -1,11 +1,7 @@
 /**
  * @file tcp_out.c
- * @author lishutong
  * @brief TCP发送处理模块，包含基本的数据报、SYN报文、FIN报文发送以及重发处理
- * @version 0.1
- * @date 2022-10-22
  * 
- * @copyright Copyright (c) 2022
  * 在发送数据时，该模块会自动根据实际的配置从发送缓冲中读取数据进行组包。
  * 包的大小是不固定的，目的是减少分片以及最大可能发送多的数据。
  * 

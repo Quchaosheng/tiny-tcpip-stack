@@ -1,11 +1,7 @@
 /**
  * @file netif.c
- * @author lishutong(527676163@qq.com)
  * @brief 网络接口层代码
- * @version 0.1
- * @date 2022-10-26
  * 
- * @copyright Copyright (c) 2022
  * 
  * 该接口层代码负责将所有的网络接口统一抽像为netif结构，并提供统一的接口进行处理
  */

@@ -1,9 +1,6 @@
 /**
   ******************************************************************************
   * @file    stm32f4xx.h
-  * @author  MCD Application Team
-  * @version V1.4.0
-  * @date    04-August-2014
   * @brief   CMSIS Cortex-M4 Device Peripheral Access Layer Header File. 
   *          This file contains all the peripheral register's definitions, bits 
   *          definitions and memory mapping for STM32F4xx devices.            

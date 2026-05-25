@@ -1,11 +1,7 @@
 ﻿/**
  * @file netapi.c
- * @author lishutong(527676163@qq.com)
  * @brief 网络接口
- * @version 0.1
- * @date 2022-11-09
  * 
- * @copyright Copyright (c) 2022
  * 
  * 网络编程接口定义
  */

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">项目平台移植地图</title>
+  <desc id="desc">展示 PC、STM32F407、x86 OS 三类运行和移植目标。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fdf7ea"/>
+      <stop offset="1" stop-color="#eff8f6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#15333c" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="960" height="520" rx="34" fill="url(#bg)"/>
+  <g font-family="'Noto Sans SC', 'Microsoft YaHei', sans-serif">
+    <text x="70" y="78" fill="#14323c" font-size="34" font-weight="800">三类运行目标</text>
+    <text x="70" y="112" fill="#49616a" font-size="17">同一套协议栈思想，分别接入 PC 抓包网卡、嵌入式以太网和教学 x86 OS。</text>
+  </g>
+  <g filter="url(#shadow)" font-family="'Noto Sans SC', 'Microsoft YaHei', sans-serif">
+    <g transform="translate(78,170)">
+      <rect width="238" height="230" rx="28" fill="#ffffff" stroke="#cde0dd" stroke-width="2"/>
+      <circle cx="60" cy="58" r="28" fill="#0f6b70"/>
+      <path d="M46 59 h28 M50 72 h20 M54 46 h12" stroke="#d9fffa" stroke-width="5" stroke-linecap="round"/>
+      <text x="30" y="116" fill="#14323c" font-size="24" font-weight="800">PC 测试工程</text>
+      <text x="30" y="152" fill="#49616a" font-size="16">pcap / Npcap</text>
+      <text x="30" y="180" fill="#49616a" font-size="16">CMake / Visual Studio</text>
+      <text x="30" y="208" fill="#49616a" font-size="16">HTTP · TFTP · Echo</text>
+    </g>
+    <g transform="translate(361,170)">
+      <rect width="238" height="230" rx="28" fill="#fff8e7" stroke="#f0c769" stroke-width="2"/>
+      <circle cx="60" cy="58" r="28" fill="#d89019"/>
+      <path d="M45 44 h30 v30 h-30 z M53 36 v8 M67 36 v8 M53 74 v8 M67 74 v8 M37 53 h8 M37 65 h8 M75 53 h8 M75 65 h8" stroke="#fff5d8" stroke-width="4" stroke-linecap="round"/>
+      <text x="30" y="116" fill="#14323c" font-size="24" font-weight="800">STM32F407</text>
+      <text x="30" y="152" fill="#49616a" font-size="16">LAN8720 / RMII</text>
+      <text x="30" y="180" fill="#49616a" font-size="16">Keil MDK 工程</text>
+      <text x="30" y="208" fill="#49616a" font-size="16">嵌入式平台适配</text>
+    </g>
+    <g transform="translate(644,170)">
+      <rect width="238" height="230" rx="28" fill="#edf7ff" stroke="#a8cae8" stroke-width="2"/>
+      <circle cx="60" cy="58" r="28" fill="#245f8f"/>
+      <path d="M44 61 c8 -22 24 -22 32 0 M44 61 c8 22 24 22 32 0 M42 61 h36 M60 37 v48" fill="none" stroke="#e0f2ff" stroke-width="4" stroke-linecap="round"/>
+      <text x="30" y="116" fill="#14323c" font-size="24" font-weight="800">x86 OS</text>
+      <text x="30" y="152" fill="#49616a" font-size="16">QEMU / 32-bit OS</text>
+      <text x="30" y="180" fill="#49616a" font-size="16">RTL8139 网卡</text>
+      <text x="30" y="208" fill="#49616a" font-size="16">Socket 系统调用</text>
+    </g>
+  </g>
+  <path d="M316 285 C342 248 342 248 361 285" fill="none" stroke="#14323c" stroke-width="3" stroke-dasharray="8 10" opacity="0.35"/>
+  <path d="M599 285 C625 248 625 248 644 285" fill="none" stroke="#14323c" stroke-width="3" stroke-dasharray="8 10" opacity="0.35"/>
+</svg>

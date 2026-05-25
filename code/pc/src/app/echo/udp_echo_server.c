@@ -3,10 +3,6 @@
  * 使用方法：程序名称 端口号
  * 使用udp echo客户端连接后，任何发过来的信息将原样回显
  * 
- * @author lishutong (527676163@qq.com)
- * @version 0.1
- * @date 2022-08-19
- * @copyright Copyright (c) 2022
  */
 #include "netapi.h"
 

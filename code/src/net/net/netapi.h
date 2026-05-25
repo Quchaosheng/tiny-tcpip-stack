@@ -1,11 +1,7 @@
 ﻿/**
  * @file netapi.h
- * @author lishutong(527676163@qq.com)
  * @brief 网络接口
- * @version 0.1
- * @date 2022-11-09
  * 
- * @copyright Copyright (c) 2022
  * 
  * 警告！！！
  * 如果使用标准socket接口，则应用程序中只能包含该文件。如果不使用，则无限制。

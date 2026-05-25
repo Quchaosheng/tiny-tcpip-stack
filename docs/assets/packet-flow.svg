@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-labelledby="title desc">
+  <title id="title">收发包数据流</title>
+  <desc id="desc">展示 pcap 或硬件输入经过 netif、exmsg、ether、IP、TCP/UDP/RAW 到应用的路径。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8f1df"/>
+      <stop offset="1" stop-color="#edf7ff"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0f6b70"/>
+    </marker>
+  </defs>
+  <rect width="960" height="500" rx="34" fill="url(#bg)"/>
+  <g font-family="'Noto Sans SC', 'Microsoft YaHei', sans-serif">
+    <text x="70" y="78" fill="#14323c" font-size="34" font-weight="800">报文流转路径</text>
+    <text x="70" y="112" fill="#49616a" font-size="17">输入输出统一经过网络接口队列和 exmsg 核心线程，便于协议栈集中调度。</text>
+  </g>
+  <g font-family="'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="700">
+    <g fill="#ffffff" stroke="#cde0dd" stroke-width="2">
+      <rect x="58" y="185" width="128" height="64" rx="18"/>
+      <rect x="232" y="185" width="128" height="64" rx="18"/>
+      <rect x="406" y="185" width="128" height="64" rx="18"/>
+      <rect x="580" y="185" width="128" height="64" rx="18"/>
+      <rect x="754" y="185" width="148" height="64" rx="18"/>
+    </g>
+    <text x="92" y="224" fill="#14323c">网卡/pcap</text>
+    <text x="268" y="224" fill="#14323c">netif</text>
+    <text x="439" y="224" fill="#14323c">exmsg</text>
+    <text x="616" y="224" fill="#14323c">Ether/IP</text>
+    <text x="784" y="224" fill="#14323c">TCP/UDP/RAW</text>
+  </g>
+  <g fill="none" stroke="#0f6b70" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M186 217 H226"/>
+    <path d="M360 217 H400"/>
+    <path d="M534 217 H574"/>
+    <path d="M708 217 H748"/>
+  </g>
+  <g font-family="'Noto Sans SC', 'Microsoft YaHei', sans-serif">
+    <rect x="234" y="330" width="492" height="70" rx="22" fill="#14323c"/>
+    <text x="284" y="372" fill="#e7fffb" font-size="20" font-weight="800">应用 recv/read 或 send/write</text>
+    <path d="M480 249 V326" fill="none" stroke="#e0a83a" stroke-width="4" stroke-dasharray="8 10"/>
+    <path d="M480 330 V252" fill="none" stroke="#e0a83a" stroke-width="4" stroke-dasharray="8 10" opacity="0.5"/>
+  </g>
+  <g opacity="0.5" fill="none" stroke="#d89019" stroke-width="2">
+    <path d="M70 430 C250 390 320 458 490 415 S760 384 900 440"/>
+  </g>
+</svg>

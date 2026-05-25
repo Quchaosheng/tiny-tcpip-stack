@@ -1,11 +1,7 @@
 ﻿/**
  * @file ntp.c
- * @author lishutong(527676163@qq.com)
  * @brief NTP时间客户端
- * @version 0.1
- * @date 2022-11-04
  * 
- * @copyright Copyright (c) 2022
  * 
  * 测试服务器列表请见： http://www.ntp.org.cn/pool
  */

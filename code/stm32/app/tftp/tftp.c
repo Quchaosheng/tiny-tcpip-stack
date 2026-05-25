@@ -1,11 +1,7 @@
 /**
  * @file tftp.c
- * @author lishutong(527676163@qq.com)
  * @brief tftp协议的实现
- * @version 0.1
- * @date 2022-11-02
  * 
- * @copyright Copyright (c) 2022
  * 
  */
 #include <string.h>

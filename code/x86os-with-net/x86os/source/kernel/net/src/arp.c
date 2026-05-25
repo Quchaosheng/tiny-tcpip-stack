@@ -1,11 +1,7 @@
 ﻿/**
  * @file arp.h
- * @author lishutong (527676163@qq.com)
  * @brief ARP协议支持
- * @version 0.1
- * @date 2022-10-29
  *
- * @copyright Copyright (c) 2022
  *
  * IPv4协议使用的是IPv4地址，其目标是设计跨越不同类型物理网络的分组交换。
  * 而以太网使用的是mac地址，需要使用正确的mac地址才能保证对方接受到数据包。

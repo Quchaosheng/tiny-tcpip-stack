@@ -1,11 +1,7 @@
 ﻿/**
  * @file tools.h
- * @author lishutong (527676163@qq.com)
  * @brief net工具集
- * @version 0.1
- * @date 2022-10-28
  *
- * @copyright Copyright (c) 2022
  * 包含字节顺序转换函数、校验和计算等功能的支持
  */
 #ifndef TOOLS_H

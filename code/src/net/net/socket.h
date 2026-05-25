@@ -1,11 +1,7 @@
 ﻿/**
  * @file socket.h
- * @author lishutong(527676163@qq.com)
  * @brief 套接字接口类型
- * @version 0.1
- * @date 2022-10-24
  *
- * @copyright Copyright (c) 2022
  *
  */
 #ifndef NET_SOCKET_H

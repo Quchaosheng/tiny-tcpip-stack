@@ -8,6 +8,8 @@
 
 当前仓库更适合作为网络协议栈学习、协议实现验证和平台移植参考工程。README 中仅描述仓库内已经存在的代码和配置，不包含未实现功能的宣传。
 
+项目展示页位于 `docs/index.html`，可通过 GitHub Pages 选择 `docs/` 目录发布。
+
 ## 功能特性
 
 - 分层实现网络协议栈核心模块：Ethernet、ARP、IPv4、ICMPv4、RAW、UDP、TCP、DNS、Loopback。

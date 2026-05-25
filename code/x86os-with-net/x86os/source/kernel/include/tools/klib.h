@@ -1,5 +1,4 @@
 //
-// Created by lishutong on 2021-07-30.
 //
 
 #ifndef KLIB_H

@@ -1,11 +1,7 @@
 ﻿/**
  * @file timer.h
- * @author lishutong(lishutong@qq.com)
  * @brief 软定时器，用于ARP包，tcp超时重传等
- * @version 0.1
- * @date 2022-10-28
  *
- * @copyright Copyright (c) 2022
  *
  */
 #ifndef TIMER_H

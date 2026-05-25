@@ -1,11 +1,7 @@
 ﻿/**
  * @file tcp_state.c
- * @author lishutong
  * @brief TCP输入处理, 对包进行各种检查，并处理状态机相关事项
- * @version 0.1
- * @date 2022-10-22
  *
- * @copyright Copyright (c) 2022
  * 
  * 处理TCP的各种状态转换过程
  */

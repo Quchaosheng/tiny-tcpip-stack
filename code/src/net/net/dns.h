@@ -1,11 +1,7 @@
 ﻿/**
  * @file dns.h
- * @author lishutong(527676163@qq.com)
  * @brief DNS客户端协议实现
- * @version 0.1
- * @date 2022-11-30
  * 
- * @copyright Copyright (c) 2022
  * 
  */
 #ifndef DNS_H

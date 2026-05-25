@@ -1,9 +1,6 @@
 /**
   ******************************************************************************
   * @file    Project/STM32F4xx_StdPeriph_Templates/stm32f4xx_it.h 
-  * @author  MCD Application Team
-  * @version V1.4.0
-  * @date    04-August-2014
   * @brief   This file contains the headers of the interrupt handlers.
   ******************************************************************************
   * @attention

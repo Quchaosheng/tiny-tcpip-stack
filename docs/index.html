@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="一个从零实现的 C 语言 TCP/IP 协议栈实验工程，包含 PC、STM32F407 和 x86 OS 移植示例。" />
+    <title>net - 自研 TCP/IP 协议栈</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&family=Noto+Sans+SC:wght@400;500;700;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <nav class="nav shell" aria-label="主导航">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="返回顶部">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>net stack lab</span>
+        </a>
+        <div class="nav-links">
+          <a href="#architecture">架构</a>
+          <a href="#platforms">平台</a>
+          <a href="#flow">数据流</a>
+          <a href="#quickstart">运行</a>
+          <a href="../README.md">README</a>
+        </div>
+      </div>
+    </nav>
+
+    <main id="top">
+      <header class="hero shell">
+        <div class="hero-grid">
+          <div class="reveal">
+            <div class="eyebrow">C99 · pcap/Npcap · STM32 · x86 OS</div>
+            <h1>从零拆开一套 <span>TCP/IP</span> 协议栈</h1>
+            <p class="lead">
+              一个面向学习、实验和移植验证的 C 语言网络协议栈工程。它不是营销式“全能网络库”，而是一套能看见 ARP、IPv4、ICMP、UDP、TCP、DNS 和应用样例如何协作的工程化代码。
+            </p>
+            <div class="actions">
+              <a class="btn primary" href="../README.md">查看 README</a>
+              <a class="btn secondary" href="#architecture">看架构图</a>
+            </div>
+          </div>
+          <div class="hero-card reveal">
+            <div class="terminal" aria-label="本地运行命令示例">
+              <div class="terminal-top">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <pre><code>cd code/pc
+cmake -S . -B build
+cmake --build build
+
+cd work
+../build/net
+
+&gt;&gt; ping 192.168.74.3
+&gt;&gt; tftp-get test.bin
+&gt;&gt; time any</code></pre>
+            </div>
+            <div class="chips" aria-label="协议模块">
+              <span class="chip">Ethernet</span>
+              <span class="chip">ARP</span>
+              <span class="chip">IPv4</span>
+              <span class="chip">ICMPv4</span>
+              <span class="chip">UDP</span>
+              <span class="chip">TCP</span>
+              <span class="chip">DNS</span>
+              <span class="chip">TFTP</span>
+              <span class="chip">HTTPD</span>
+            </div>
+            <div class="orbit" aria-hidden="true"></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="shell stats" aria-label="项目概览">
+        <div class="stat reveal">
+          <strong>C99</strong>
+          <span>核心实现语言</span>
+        </div>
+        <div class="stat reveal">
+          <strong>3</strong>
+          <span>PC / STM32 / x86 OS 目标</span>
+        </div>
+        <div class="stat reveal">
+          <strong>Socket</strong>
+          <span>自定义 API 层</span>
+        </div>
+        <div class="stat reveal">
+          <strong>pcap</strong>
+          <span>PC 端收发以太网帧</span>
+        </div>
+      </section>
+
+      <section id="architecture" class="shell">
+        <div class="section-head">
+          <h2>分层架构</h2>
+          <p>协议栈核心、平台适配层和应用测试层分离，便于在 PC 上调试，再迁移到嵌入式或教学 OS 环境。</p>
+        </div>
+        <div class="visual-card reveal">
+          <img src="./assets/protocol-layers.svg" alt="TCP/IP 协议栈分层架构图" />
+        </div>
+      </section>
+
+      <section id="platforms" class="shell">
+        <div class="section-head">
+          <h2>平台地图</h2>
+          <p>仓库不是单一 demo，而是保留了 PC 测试工程、STM32F407 移植和 x86 OS 集成代码，适合对照平台差异。</p>
+        </div>
+        <div class="visual-card reveal">
+          <img src="./assets/platform-map.svg" alt="PC、STM32F407、x86 OS 三类运行目标图" />
+        </div>
+      </section>
+
+      <section class="shell">
+        <div class="section-head">
+          <h2>真实能力边界</h2>
+          <p>页面只展示仓库里已经存在的模块，不把学习工程包装成生产级网络协议栈。</p>
+        </div>
+        <div class="grid-3">
+          <article class="feature reveal">
+            <span class="num">01</span>
+            <h3>协议实现可读</h3>
+            <p>核心模块覆盖 Ethernet、ARP、IPv4、ICMPv4、RAW、UDP、TCP、DNS 和 Loopback，适合逐层调试。</p>
+          </article>
+          <article class="feature reveal">
+            <span class="num">02</span>
+            <h3>应用样例可跑</h3>
+            <p>PC 端入口包含 Ping、TFTP、HTTP 静态文件服务、NTP、TCP/UDP Echo 等测试路径。</p>
+          </article>
+          <article class="feature reveal">
+            <span class="num">03</span>
+            <h3>移植路径清晰</h3>
+            <p>平台相关代码集中在 plat/netif 侧，PC 使用 pcap/Npcap，STM32 连接 LAN8720，x86 OS 面向 RTL8139。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="flow" class="shell">
+        <div class="section-head">
+          <h2>报文数据流</h2>
+          <p>外部网卡输入和应用 Socket API 请求最终都进入核心线程处理，方便观察协议栈调度模型。</p>
+        </div>
+        <div class="visual-card reveal">
+          <img src="./assets/packet-flow.svg" alt="协议栈收发包数据流图" />
+        </div>
+      </section>
+
+      <section id="quickstart" class="shell">
+        <div class="section-head">
+          <h2>快速运行</h2>
+          <p>PC 端是最适合本地体验的入口。运行前需要根据本机网卡修改 `sys_plat.h` 中的 IP 参数。</p>
+        </div>
+        <div class="code-panel">
+          <div class="note-card reveal">
+            <h3>推荐从 PC 工程开始</h3>
+            <p>
+              `code/pc` 使用 CMake 构建，默认通过 pcap/Npcap 访问真实网卡。运行时建议从 `code/pc/work` 启动，HTTP 服务会读取该目录下的 `htdocs`。
+            </p>
+            <div class="modules">
+              <span class="module">net_init</span>
+              <span class="module">net_start</span>
+              <span class="module">netif</span>
+              <span class="module">exmsg</span>
+              <span class="module">socket API</span>
+            </div>
+          </div>
+          <div class="command reveal">
+            <pre><code># Windows / Linux / macOS 基本流程
+cd code/pc
+cmake -S . -B build
+cmake --build build
+
+# Windows Visual Studio Debug 输出通常位于 build/Debug/net.exe
+# Linux/macOS 输出通常位于 build/net
+mkdir -p work/tftp
+cd work
+../build/net</code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer shell">
+      <div class="footer-inner">
+        <strong>net - 自研 TCP/IP 协议栈</strong>
+        <span>面向学习、实验和移植验证。开源发布前请确认 License。</span>
+      </div>
+    </footer>
+  </body>
+</html>

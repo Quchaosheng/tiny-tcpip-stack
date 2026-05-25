@@ -1,11 +1,7 @@
 ﻿/**
  * @file ipv4.h
- * @author lishutong (527676163@qq.com)
  * @brief IPv4协议支持
- * @version 0.1
- * @date 2022-10-30
  * 
- * @copyright Copyright (c) 2022
  * 包含IP包输入输出处理，数据报分片与重组、路由表
  */
 #ifndef IPV4_H

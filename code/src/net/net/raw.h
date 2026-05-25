@@ -1,11 +1,7 @@
 ﻿/**
  * @file raw.h
- * @author lishutong(527676163@qq.com)
  * @brief 原始套接字
- * @version 0.1
- * @date 2022-10-24
  *
- * @copyright Copyright (c) 2022
  */
 #ifndef RAW_H
 #define RAW_H

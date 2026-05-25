@@ -1,12 +1,8 @@
 ﻿
 /**
  * @file tcp_buf.c
- * @author lishutong 527676163@qq.com
  * @brief TCP环形缓冲区
- * @version 0.1
- * @date 2022-11-11
  * 
- * @copyright Copyright (c) 2022
  */
 #include "tcp_buf.h"
 #include "pktbuf.h"

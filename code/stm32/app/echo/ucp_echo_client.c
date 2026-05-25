@@ -1,11 +1,7 @@
 ﻿/**
  * @file udp_echo_client.c
- * @author lishutong (527676163@qq.com)
  * @brief UDP回显示客户端
- * @version 0.1
- * @date 2022-11-03
  * 
- * @copyright Copyright (c) 2022
  * 
  * 启动后，进入命令行模式，将键盘的字符串发给服务器然后等待服务器的连接
  */

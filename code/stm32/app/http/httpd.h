@@ -1,11 +1,7 @@
 /**
  * @file httpd.h
- * @author lishutong(527676163@qq.com)
  * @brief http web服务器的简单实现
- * @version 0.1
- * @date 2022-11-30
  * 
- * @copyright Copyright (c) 2022
  * 
  */
 #ifndef HTTPD_H

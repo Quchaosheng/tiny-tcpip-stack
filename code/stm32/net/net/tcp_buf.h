@@ -1,11 +1,7 @@
 /**
  * @file tcp_buf.h
- * @author lishutong 527676163@qq.com
  * @brief TCP收发缓存，使用环形缓存实现
- * @version 0.1
- * @date 2022-11-11
  * 
- * @copyright Copyright (c) 2022
  */
 #include "net_cfg.h"
 #include "sys.h"

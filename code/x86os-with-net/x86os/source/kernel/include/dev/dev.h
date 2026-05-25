@@ -3,7 +3,6 @@
  *
  * 创建时间：2022年7月5日
  * 作者：李述铜
- * 联系邮箱: 527676163@qq.com
  * 参考资料：https://wiki.osdev.org/Printing_To_Screen
  */
 #ifndef DEV_H

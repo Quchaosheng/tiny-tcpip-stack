@@ -1,11 +1,7 @@
 /**
  * @file dns.c
- * @author lishutong(527676163@qq.com)
  * @brief DNS客户端协议实现
- * @version 0.1
- * @date 2022-12-02
  * 
- * @copyright Copyright (c) 2022
  * 目前是针对每一个域名做一次查询，这样简单一些。虽然也可以一次查询多个，但是这样处理起来比较麻烦。
  */
 #include "netapi.h"

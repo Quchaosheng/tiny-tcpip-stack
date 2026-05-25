@@ -1,11 +1,7 @@
 ﻿/**
  * @file tcp_state.h
- * @author lishutong(527676163@qq.com)
  * @brief tcp状态处理
- * @version 0.1
- * @date 2022-11-17
  * 
- * @copyright Copyright (c) 2022
  * 
  * 处理TCP的各种状态转换过程
  */

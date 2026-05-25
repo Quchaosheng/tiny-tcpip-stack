@@ -1,12 +1,8 @@
 ﻿/**
  * @file mblock.c
- * @author lishutong (527676163@qq.com)
  * @brief 存储块管理器
  * 用于将固定大小的存储块组织成块链表，并允许从中申请和释放块
- * @version 0.1
- * @date 2022-10-25
  *
- * @copyright Copyright (c) 2022
  *
  */
 #include "sys_plat.h"

@@ -3,7 +3,6 @@
  *
  * 创建时间：2022年6月5日
  * 作者：李述铜
- * 联系邮箱: 527676163@qq.com
  */
 #ifndef TIMER_H
 #define TIMER_H

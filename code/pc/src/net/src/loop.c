@@ -1,11 +1,7 @@
 ﻿/**
  * @file loop.c
- * @author lishutong(527676163@qq.com)
  * @brief 回环接口
- * @version 0.1
- * @date 2022-10-26
  * 
- * @copyright Copyright (c) 2022
  * 
  * 环回接口是一种虚拟接口，可以在没有物理机器或网络连接的情况下，实现本机
  * 上不同应用程序之前通过TCP/IP协议栈通信

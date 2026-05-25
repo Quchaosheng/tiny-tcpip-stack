@@ -1,9 +1,6 @@
 /**
   ******************************************************************************
   * @file    Project/STM32F4xx_StdPeriph_Templates/stm32f4xx_it.c 
-  * @author  MCD Application Team
-  * @version V1.4.0
-  * @date    04-August-2014
   * @brief   Main Interrupt Service Routines.
   *          This file provides template for all exceptions handler and 
   *          peripherals interrupt service routine.

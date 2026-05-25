@@ -1,11 +1,7 @@
 ﻿/**
  * @file tcp_in.h
- * @author lishutong
  * @brief TCP输入处理, 包括对其中的数据进行管理
- * @version 0.1
- * @date 2022-10-22
  *
- * @copyright Copyright (c) 2022
  * 
  * 如果收到了TCP包，可能需要即地其进行排序，因为TCP可能会先收到
  * 大序列号的数据，再收到小的；甚至有可能出现多个包之间序列号重叠。

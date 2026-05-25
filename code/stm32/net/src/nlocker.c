@@ -1,11 +1,7 @@
 ﻿/**
  * @file nlocker.c
- * @author lishutong (527676163@qq.com)
  * @brief 资源锁
- * @version 0.1
- * @date 2022-10-25
  *
- * @copyright Copyright (c) 2022
  *
  */
 #include "nlocker.h"

@@ -1,11 +1,7 @@
 ﻿/**
  * @file net_err.h
- * @author lishutong(lishutong@qq.com)
  * @brief 错误类型及常量
- * @version 0.1
- * @date 2022-10-24
  *
- * @copyright Copyright (c) 2022
  *
  */
 #ifndef NET_ERR_H
