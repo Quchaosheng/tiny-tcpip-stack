@@ -1,56 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="title desc">
-  <title id="title">TCP/IP 协议栈分层架构</title>
-  <desc id="desc">展示应用层、Socket API、传输层、网络层、链路层、平台适配层之间的关系。</desc>
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">Protocol stack layered architecture</title>
+  <desc id="desc">Application layer, socket API layer, transport layer, network layer, and link-platform layer.</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#f8f1df"/>
-      <stop offset="1" stop-color="#e8f8f5"/>
+      <stop offset="0" stop-color="#fdf6e7"/>
+      <stop offset="1" stop-color="#eef8ff"/>
     </linearGradient>
-    <linearGradient id="layer" x1="0" x2="1">
-      <stop offset="0" stop-color="#183b4a"/>
-      <stop offset="1" stop-color="#0f6b70"/>
+    <linearGradient id="link" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#143544"/>
+      <stop offset="1" stop-color="#0b7d74"/>
     </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#17333d" flood-opacity="0.15"/>
+      <feDropShadow dx="0" dy="15" stdDeviation="16" flood-color="#112735" flood-opacity="0.16"/>
     </filter>
   </defs>
-  <rect width="960" height="640" rx="34" fill="url(#bg)"/>
-  <path d="M40 128 C180 84 230 160 360 114 C488 68 558 82 680 126 C782 163 846 146 920 104" fill="none" stroke="#e0a83a" stroke-width="4" stroke-dasharray="10 12" opacity="0.55"/>
-  <g font-family="'Noto Sans SC', 'Microsoft YaHei', sans-serif">
-    <text x="72" y="78" fill="#14323c" font-size="34" font-weight="800">协议栈分层视图</text>
-    <text x="72" y="112" fill="#49616a" font-size="17">从测试应用到平台网卡驱动，核心模块以消息队列进入单核心协议栈线程。</text>
+
+  <rect width="1200" height="780" rx="40" fill="url(#bg)"/>
+
+  <g font-family="'Space Grotesk', 'Segoe UI', sans-serif">
+    <text x="86" y="88" fill="#14242f" font-size="46" font-weight="700" letter-spacing="-1.2">Layered Stack Architecture</text>
+    <text x="86" y="126" fill="#4f6672" font-size="20">Core protocol logic is separated from platform dependencies and application test paths.</text>
   </g>
-  <g filter="url(#shadow)" font-family="'Noto Sans SC', 'Microsoft YaHei', sans-serif">
-    <g transform="translate(100,150)">
-      <rect width="760" height="70" rx="22" fill="#fff8e7" stroke="#f0c769" stroke-width="2"/>
-      <text x="34" y="43" fill="#14323c" font-size="22" font-weight="800">应用层</text>
-      <text x="170" y="43" fill="#49616a" font-size="17">Ping · TFTP · HTTPD · NTP · Echo · Test CLI</text>
+
+  <g filter="url(#shadow)" font-family="'Manrope', 'Segoe UI', sans-serif" font-size="24" font-weight="700">
+    <g transform="translate(96 180)">
+      <rect width="1008" height="86" rx="24" fill="#fff8ea" stroke="#f0ca79" stroke-width="2"/>
+      <text x="32" y="54" fill="#14242f">Application Layer</text>
+      <text x="320" y="54" fill="#4f6672" font-size="21" font-weight="600">Ping, TFTP, HTTPD, NTP, TCP/UDP Echo, Test CLI</text>
     </g>
-    <g transform="translate(100,238)">
-      <rect width="760" height="70" rx="22" fill="#ffffff" stroke="#c6ddd9" stroke-width="2"/>
-      <text x="34" y="43" fill="#14323c" font-size="22" font-weight="800">Socket API</text>
-      <text x="198" y="43" fill="#49616a" font-size="17">x_socket · x_send · x_recv · x_bind · x_connect · x_accept</text>
+
+    <g transform="translate(96 286)">
+      <rect width="1008" height="86" rx="24" fill="#ffffff" stroke="#c8dbdf" stroke-width="2"/>
+      <text x="32" y="54" fill="#14242f">Socket API Layer</text>
+      <text x="320" y="54" fill="#4f6672" font-size="21" font-weight="600">x_socket, x_bind, x_connect, x_send, x_recv, x_accept</text>
     </g>
-    <g transform="translate(100,326)">
-      <rect width="760" height="70" rx="22" fill="#effaf7" stroke="#9ed5cb" stroke-width="2"/>
-      <text x="34" y="43" fill="#14323c" font-size="22" font-weight="800">传输层</text>
-      <text x="170" y="43" fill="#49616a" font-size="17">RAW · UDP · TCP · TCP In/Out · TCP State · TCP Buffer</text>
+
+    <g transform="translate(96 392)">
+      <rect width="1008" height="86" rx="24" fill="#edfaf8" stroke="#9cd4ca" stroke-width="2"/>
+      <text x="32" y="54" fill="#14242f">Transport Layer</text>
+      <text x="320" y="54" fill="#4f6672" font-size="21" font-weight="600">RAW, UDP, TCP, TCP Input/Output, TCP State</text>
     </g>
-    <g transform="translate(100,414)">
-      <rect width="760" height="70" rx="22" fill="#e9f4ff" stroke="#a8cae8" stroke-width="2"/>
-      <text x="34" y="43" fill="#14323c" font-size="22" font-weight="800">网络层</text>
-      <text x="170" y="43" fill="#49616a" font-size="17">IPv4 · ICMPv4 · DNS · 路由表 · 分片与重组</text>
+
+    <g transform="translate(96 498)">
+      <rect width="1008" height="86" rx="24" fill="#eaf3ff" stroke="#a9c8e2" stroke-width="2"/>
+      <text x="32" y="54" fill="#14242f">Network Layer</text>
+      <text x="320" y="54" fill="#4f6672" font-size="21" font-weight="600">IPv4, ICMPv4, DNS, route table, fragmentation</text>
     </g>
-    <g transform="translate(100,502)">
-      <rect width="760" height="70" rx="22" fill="url(#layer)"/>
-      <text x="34" y="43" fill="#ffffff" font-size="22" font-weight="800">链路与平台</text>
-      <text x="190" y="43" fill="#d4fffa" font-size="17">Ethernet · ARP · Netif · pcap/Npcap · LAN8720 · RTL8139</text>
+
+    <g transform="translate(96 604)">
+      <rect width="1008" height="86" rx="24" fill="url(#link)"/>
+      <text x="32" y="54" fill="#ffffff">Link and Platform Layer</text>
+      <text x="350" y="54" fill="#d7fffb" font-size="21" font-weight="600">Ethernet, ARP, netif, pcap/Npcap, LAN8720, RTL8139</text>
     </g>
   </g>
-  <g fill="none" stroke="#14323c" stroke-width="3" opacity="0.28">
-    <path d="M480 220 L480 238"/>
-    <path d="M480 308 L480 326"/>
-    <path d="M480 396 L480 414"/>
-    <path d="M480 484 L480 502"/>
+
+  <g fill="none" stroke="#173745" stroke-width="3" opacity="0.28">
+    <path d="M600 266 V286"/>
+    <path d="M600 372 V392"/>
+    <path d="M600 478 V498"/>
+    <path d="M600 584 V604"/>
+  </g>
+
+  <g fill="none" stroke="#d78611" stroke-width="4" opacity="0.44" stroke-dasharray="9 11">
+    <path d="M70 160 C260 106 350 198 540 140 C720 88 820 120 980 152 C1060 168 1120 140 1160 116"/>
   </g>
 </svg>

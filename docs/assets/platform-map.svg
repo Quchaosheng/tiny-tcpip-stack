@@ -1,49 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
-  <title id="title">项目平台移植地图</title>
-  <desc id="desc">展示 PC、STM32F407、x86 OS 三类运行和移植目标。</desc>
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Platform map</title>
+  <desc id="desc">PC validation project, STM32 migration path, and x86 OS integration path.</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#fdf7ea"/>
-      <stop offset="1" stop-color="#eff8f6"/>
+      <stop offset="0" stop-color="#fcf7ea"/>
+      <stop offset="1" stop-color="#eef8f5"/>
     </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#15333c" flood-opacity="0.16"/>
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#13303d" flood-opacity="0.16"/>
     </filter>
   </defs>
-  <rect width="960" height="520" rx="34" fill="url(#bg)"/>
-  <g font-family="'Noto Sans SC', 'Microsoft YaHei', sans-serif">
-    <text x="70" y="78" fill="#14323c" font-size="34" font-weight="800">三类运行目标</text>
-    <text x="70" y="112" fill="#49616a" font-size="17">同一套协议栈思想，分别接入 PC 抓包网卡、嵌入式以太网和教学 x86 OS。</text>
+
+  <rect width="1200" height="700" rx="40" fill="url(#bg)"/>
+
+  <g font-family="'Space Grotesk', 'Segoe UI', sans-serif">
+    <text x="86" y="86" fill="#13222c" font-size="44" font-weight="700" letter-spacing="-1">Platform Integration Map</text>
+    <text x="86" y="124" fill="#4f6672" font-size="20">One protocol stack concept with different platform adapters and runtime contexts.</text>
   </g>
-  <g filter="url(#shadow)" font-family="'Noto Sans SC', 'Microsoft YaHei', sans-serif">
-    <g transform="translate(78,170)">
-      <rect width="238" height="230" rx="28" fill="#ffffff" stroke="#cde0dd" stroke-width="2"/>
-      <circle cx="60" cy="58" r="28" fill="#0f6b70"/>
-      <path d="M46 59 h28 M50 72 h20 M54 46 h12" stroke="#d9fffa" stroke-width="5" stroke-linecap="round"/>
-      <text x="30" y="116" fill="#14323c" font-size="24" font-weight="800">PC 测试工程</text>
-      <text x="30" y="152" fill="#49616a" font-size="16">pcap / Npcap</text>
-      <text x="30" y="180" fill="#49616a" font-size="16">CMake / Visual Studio</text>
-      <text x="30" y="208" fill="#49616a" font-size="16">HTTP · TFTP · Echo</text>
+
+  <g filter="url(#shadow)" font-family="'Manrope', 'Segoe UI', sans-serif">
+    <g transform="translate(90 190)">
+      <rect width="320" height="360" rx="30" fill="#ffffff" stroke="#c9dcdf" stroke-width="2"/>
+      <circle cx="66" cy="70" r="34" fill="#0e8b7b"/>
+      <path d="M48 66 h36 M54 80 h24 M60 52 h12" stroke="#e3fffb" stroke-width="5" stroke-linecap="round"/>
+      <text x="34" y="138" fill="#13222c" font-size="34" font-weight="800">PC Validation</text>
+      <text x="34" y="186" fill="#4f6672" font-size="20" font-weight="600">pcap / Npcap host NIC access</text>
+      <text x="34" y="220" fill="#4f6672" font-size="20" font-weight="600">CMake + Visual Studio flow</text>
+      <text x="34" y="254" fill="#4f6672" font-size="20" font-weight="600">HTTPD, TFTP, Echo test paths</text>
+      <text x="34" y="288" fill="#4f6672" font-size="20" font-weight="600">Primary local debug entry</text>
     </g>
-    <g transform="translate(361,170)">
-      <rect width="238" height="230" rx="28" fill="#fff8e7" stroke="#f0c769" stroke-width="2"/>
-      <circle cx="60" cy="58" r="28" fill="#d89019"/>
-      <path d="M45 44 h30 v30 h-30 z M53 36 v8 M67 36 v8 M53 74 v8 M67 74 v8 M37 53 h8 M37 65 h8 M75 53 h8 M75 65 h8" stroke="#fff5d8" stroke-width="4" stroke-linecap="round"/>
-      <text x="30" y="116" fill="#14323c" font-size="24" font-weight="800">STM32F407</text>
-      <text x="30" y="152" fill="#49616a" font-size="16">LAN8720 / RMII</text>
-      <text x="30" y="180" fill="#49616a" font-size="16">Keil MDK 工程</text>
-      <text x="30" y="208" fill="#49616a" font-size="16">嵌入式平台适配</text>
+
+    <g transform="translate(440 190)">
+      <rect width="320" height="360" rx="30" fill="#fff7e4" stroke="#eec56b" stroke-width="2"/>
+      <circle cx="66" cy="70" r="34" fill="#d78611"/>
+      <path d="M49 52 h34 v34 h-34 z M57 43 v9 M75 43 v9 M57 86 v9 M75 86 v9" stroke="#fff7df" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <text x="34" y="138" fill="#13222c" font-size="34" font-weight="800">STM32F407</text>
+      <text x="34" y="186" fill="#4f6672" font-size="20" font-weight="600">LAN8720 Ethernet path</text>
+      <text x="34" y="220" fill="#4f6672" font-size="20" font-weight="600">Keil project references</text>
+      <text x="34" y="254" fill="#4f6672" font-size="20" font-weight="600">Embedded platform adaptation</text>
+      <text x="34" y="288" fill="#4f6672" font-size="20" font-weight="600">Migration-oriented code split</text>
     </g>
-    <g transform="translate(644,170)">
-      <rect width="238" height="230" rx="28" fill="#edf7ff" stroke="#a8cae8" stroke-width="2"/>
-      <circle cx="60" cy="58" r="28" fill="#245f8f"/>
-      <path d="M44 61 c8 -22 24 -22 32 0 M44 61 c8 22 24 22 32 0 M42 61 h36 M60 37 v48" fill="none" stroke="#e0f2ff" stroke-width="4" stroke-linecap="round"/>
-      <text x="30" y="116" fill="#14323c" font-size="24" font-weight="800">x86 OS</text>
-      <text x="30" y="152" fill="#49616a" font-size="16">QEMU / 32-bit OS</text>
-      <text x="30" y="180" fill="#49616a" font-size="16">RTL8139 网卡</text>
-      <text x="30" y="208" fill="#49616a" font-size="16">Socket 系统调用</text>
+
+    <g transform="translate(790 190)">
+      <rect width="320" height="360" rx="30" fill="#ebf4ff" stroke="#a8c9e6" stroke-width="2"/>
+      <circle cx="66" cy="70" r="34" fill="#2a6ca0"/>
+      <path d="M48 72 c8 -20 24 -20 32 0 M48 72 c8 20 24 20 32 0 M46 72 h36 M64 48 v48" fill="none" stroke="#e6f5ff" stroke-width="4" stroke-linecap="round"/>
+      <text x="34" y="138" fill="#13222c" font-size="34" font-weight="800">x86 OS Path</text>
+      <text x="34" y="186" fill="#4f6672" font-size="20" font-weight="600">QEMU runtime target</text>
+      <text x="34" y="220" fill="#4f6672" font-size="20" font-weight="600">RTL8139 NIC adaptation</text>
+      <text x="34" y="254" fill="#4f6672" font-size="20" font-weight="600">Socket syscall integration</text>
+      <text x="34" y="288" fill="#4f6672" font-size="20" font-weight="600">Teaching OS compatibility work</text>
     </g>
   </g>
-  <path d="M316 285 C342 248 342 248 361 285" fill="none" stroke="#14323c" stroke-width="3" stroke-dasharray="8 10" opacity="0.35"/>
-  <path d="M599 285 C625 248 625 248 644 285" fill="none" stroke="#14323c" stroke-width="3" stroke-dasharray="8 10" opacity="0.35"/>
+
+  <g fill="none" stroke="#152d3a" stroke-width="3" opacity="0.3" stroke-dasharray="10 10">
+    <path d="M410 360 C425 340 425 340 440 360"/>
+    <path d="M760 360 C775 340 775 340 790 360"/>
+  </g>
 </svg>
